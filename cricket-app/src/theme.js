@@ -10,67 +10,7 @@ const theme = createTheme({
       light: "#6C5DD3", //light gray for side bar hover
     },
   },
-  typography: {
-    synxSectionH1: {
-      paddingLeft: "1rem",
-      color: "#949494",
-      fontSize: "0.70rem",
-      fontWeight: "500",
-      fontFamily: "DM Sans",
-    },
-    synxBtnSection: {
-      "&:hover": {
-        color: "#A79EE5",
-      },
-      paddingLeft: "1rem",
-      fontSize: "0.8rem",
-      fontWeight: "500",
-      fontFamily: "DM Sans",
-    },
-    imageIconsTypography: {
-      "&:hover": {
-        color: "#A79EE5",
-      },
-      paddingLeft: "1rem",
-      fontSize: "0.8rem",
-      fontWeight: "500",
-      fontFamily: "DM Sans",
-      lineHeight: "30px",
-      display: "flex",
-    },
-    toolSectionH1: {
-      paddingLeft: "1rem",
-      color: "#949494",
-      fontSize: "0.70rem",
-      fontWeight: "500",
-      fontFamily: "DM Sans",
-    },
-    toolBtnSection: {
-      "&:hover": {
-        color: "#A79EE5",
-      },
-      paddingLeft: "1rem",
-      fontSize: "0.8rem",
-      fontWeight: "500",
-      fontFamily: "DM Sans",
-    },
-    generalSectionH1: {
-      paddingLeft: "1rem",
-      color: "#949494",
-      fontSize: "0.70rem",
-      fontWeight: "500",
-      fontFamily: "DM Sans",
-    },
-    generalBtnSection: {
-      "&:hover": {
-        color: "#A79EE5",
-      },
-      paddingLeft: "1rem",
-      fontSize: "0.8rem",
-      fontWeight: "500",
-      fontFamily: "DM Sans",
-    },
-  },
+  typography: {},
 });
 
 export default theme;
