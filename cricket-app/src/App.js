@@ -1,11 +1,8 @@
 import "./App.css";
+// import SechdulePage from "./pages/sechdulePage";
 import LeaderBoardPage from "./pages/leaderBoardPage";
 function App() {
-  return (
-    <div className="App" style={{ backgroundColor: "primary.light" }}>
-      <LeaderBoardPage />
-    </div>
-  );
+  return <LeaderBoardPage />;
 }
 
 export default App;
