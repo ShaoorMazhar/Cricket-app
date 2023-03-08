@@ -22,9 +22,9 @@ export default function ButtonAppBar() {
           >
             <Grid
               item
-              xs={3}
-              md={2}
-              lg={1.8}
+              xs={6}
+              md={4}
+              lg={3}
               sx={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -50,8 +50,22 @@ export default function ButtonAppBar() {
                   flexDirection: "column",
                 }}
               >
-                <Typography sx={{ fontWeight: "700" }}>League</Typography>
-                <Typography sx={{ fontWeight: "700" }}>Web UI</Typography>
+                <Typography
+                  sx={{
+                    fontWeight: "700",
+                    fontFamily: "Open Sans, sans-serif",
+                  }}
+                >
+                  League
+                </Typography>
+                <Typography
+                  sx={{
+                    fontWeight: "700",
+                    fontFamily: "Open Sans, sans-serif",
+                  }}
+                >
+                  Web UI
+                </Typography>
               </Grid>
             </Grid>
           </Grid>
@@ -78,7 +92,11 @@ export default function ButtonAppBar() {
                 />
                 <a
                   href="url"
-                  style={{ textDecoration: "none", color: "#ffffff" }}
+                  style={{
+                    textDecoration: "none",
+                    color: "#ffffff",
+                    fontFamily: "Open Sans, sans-serif",
+                  }}
                 >
                   Schedule
                 </a>
@@ -97,7 +115,11 @@ export default function ButtonAppBar() {
                 />
                 <a
                   href="url"
-                  style={{ textDecoration: "none", color: "#ffffff" }}
+                  style={{
+                    textDecoration: "none",
+                    color: "#ffffff",
+                    fontFamily: "Open Sans, sans-serif",
+                  }}
                 >
                   LeaderBoard
                 </a>
