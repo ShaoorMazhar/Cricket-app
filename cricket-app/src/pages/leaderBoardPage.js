@@ -4,6 +4,7 @@ import { Grid, Typography } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import Footer from "../components/footer";
 import theme from "../../src/theme";
+import ButtonAppBar from "../components/header";
 
 function LeaderBoardPage() {
   return (
@@ -12,7 +13,8 @@ function LeaderBoardPage() {
         container
         sx={{ justifyContent: "center", minHeight: "calc(94.5vh)" }}
       >
-        <Grid item xs={11} sx={{ marginTop: "60px" }}>
+        <ButtonAppBar />
+        <Grid item xs={11}>
           <Grid item xs={12} sx={{ display: "flex", justifyContent: "center" }}>
             <Typography variant="h1" sx={{ marginBottom: "20px" }}>
               League Standings

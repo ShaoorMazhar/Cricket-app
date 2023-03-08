@@ -1,15 +1,5 @@
 import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#000000", //black
-      light: "#1E1E25", //matblack
-    },
-    secondary: {
-      main: "#F6F7F7", //side Bar Text
-      light: "#6C5DD3", //light gray for side bar hover
-    },
-  },
   typography: {
     h1: {
       fontSize: "1.5rem",
