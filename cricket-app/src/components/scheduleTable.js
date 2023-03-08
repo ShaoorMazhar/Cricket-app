@@ -134,7 +134,7 @@ export default function SecheduleTable() {
           <TableRow>
             <StyledTableCell
               sx={{
-                display: { xs: "none", md: "revert" },
+                display: { xs: "none", sm: "revert" },
               }}
             >
               Date/Time
@@ -142,7 +142,7 @@ export default function SecheduleTable() {
 
             <StyledTableCell
               sx={{
-                display: { xs: "none", lg: "revert" },
+                display: { xs: "none", md: "revert" },
               }}
               align="left"
             >
@@ -160,7 +160,7 @@ export default function SecheduleTable() {
                 component="th"
                 scope="row"
                 sx={{
-                  display: { xs: "none", md: "revert" },
+                  display: { xs: "none", sm: "revert" },
                 }}
               >
                 <Box component="div">
@@ -180,7 +180,7 @@ export default function SecheduleTable() {
               <StyledTableCell
                 align="left"
                 sx={{
-                  display: { xs: "none", lg: "revert" },
+                  display: { xs: "none", md: "revert" },
                 }}
               >
                 {row?.stadium}
