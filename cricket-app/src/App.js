@@ -1,10 +1,10 @@
 import "./App.css";
-// import SechdulePage from "./pages/sechdulePage";
+import SechdulePage from "./pages/sechdulePage";
 // import LeaderBoardPage from "./pages/leaderBoardPage";
-import ErrorPage from "./pages/errorPage";
+// import ErrorPage from "./pages/errorPage";
 
 function App() {
-  return <ErrorPage />;
+  return <SechdulePage />;
 }
 
 export default App;

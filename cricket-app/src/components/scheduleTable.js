@@ -42,21 +42,93 @@ const StyledTableRow = styled(TableRow)(() => ({
     border: 0,
   },
 }));
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
 
 const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  {
+    matchDate: 1651744228685,
+    stadium: "Maracanã",
+    homeTeam: "Brazil",
+    awayTeam: "Serbia",
+    matchPlayed: true,
+    homeTeamScore: 2,
+    awayTeamScore: 1,
+  },
+  {
+    matchDate: 1651744228685,
+    stadium: "Maracanã",
+    homeTeam: "Brazil",
+    awayTeam: "Serbia",
+    matchPlayed: true,
+    homeTeamScore: 2,
+    awayTeamScore: 1,
+  },
+  {
+    matchDate: 1651744228685,
+    stadium: "Maracanã",
+    homeTeam: "Serbia",
+    awayTeam: "Brazil",
+    matchPlayed: true,
+    homeTeamScore: 2,
+    awayTeamScore: 1,
+  },
+  {
+    matchDate: 1651744228685,
+    stadium: "Maracanã",
+    homeTeam: "Serbia",
+    awayTeam: "Brazil",
+    matchPlayed: true,
+    homeTeamScore: 2,
+    awayTeamScore: 1,
+  },
+  {
+    matchDate: 1651744228685,
+    stadium: "Stade de Suisse",
+    homeTeam: "Switzerland",
+    awayTeam: "Serbia",
+    matchPlayed: true,
+    homeTeamScore: 1,
+    awayTeamScore: 2,
+  },
+  {
+    matchDate: 1651744228685,
+    stadium: "Stadion Rajko Mitic",
+    homeTeam: "Serbia",
+    awayTeam: "Cameroon",
+    matchPlayed: true,
+    homeTeamScore: 2,
+    awayTeamScore: 1,
+  },
+  {
+    matchDate: 1651744228685,
+    stadium: "Maracanã",
+    homeTeam: "Brazil",
+    awayTeam: "Switzerland",
+    matchPlayed: true,
+    homeTeamScore: 2,
+    awayTeamScore: 1,
+  },
+  {
+    matchDate: 1651744228685,
+    stadium: "Maracanã",
+    homeTeam: "Brazil",
+    awayTeam: "Cameroon",
+    matchPlayed: true,
+    homeTeamScore: 2,
+    awayTeamScore: 1,
+  },
+  {
+    matchDate: 1651744228685,
+    stadium: "Stade de Suisse",
+    homeTeam: "Switzerland",
+    awayTeam: "Cameroon",
+    matchPlayed: true,
+    homeTeamScore: 2,
+    awayTeamScore: 2,
+  },
 ];
 export default function SecheduleTable() {
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} sx={{ height: "463px" }}>
       <Table aria-label="customized table">
         <TableHead>
           <TableRow>
@@ -83,7 +155,7 @@ export default function SecheduleTable() {
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <StyledTableRow key={row.name}>
+            <StyledTableRow key={row?.name}>
               <StyledTableCell
                 component="th"
                 scope="row"
@@ -91,8 +163,18 @@ export default function SecheduleTable() {
                   display: { xs: "none", md: "revert" },
                 }}
               >
-                <Box component="div">5.5.2020</Box>
-                <Box component="div">11:50</Box>
+                <Box component="div">
+                  {new Date(row?.matchDate).toLocaleDateString()}
+                </Box>
+                <Box component="div" sx={{ marginLeft: "1.5rem" }}>
+                  {new Date(row?.matchDate)
+                    .toLocaleTimeString([], {
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    })
+                    .replace("AM", "")
+                    .replace("PM", "")}
+                </Box>
               </StyledTableCell>
 
               <StyledTableCell
@@ -101,19 +183,23 @@ export default function SecheduleTable() {
                   display: { xs: "none", lg: "revert" },
                 }}
               >
-                Stae de suise
+                {row?.stadium}
               </StyledTableCell>
-              <StyledTableCell align="right" sx={{ width: "190px" }}>
-                <Grid container sx={{ alignItems: "center" }}>
+              <StyledTableCell align="right" sx={{ width: "230px" }}>
+                <Grid
+                  container
+                  sx={{ alignItems: "center", justifyContent: "center" }}
+                >
                   <Box
                     component="div"
                     sx={{
                       fontSize: "16px !important",
                       fontWeight: "bolder",
                       marginRight: "1rem",
+                      width: "100px",
                     }}
                   >
-                    Brazil
+                    {row?.homeTeam}
                   </Box>
                   <Box component="div" sx={{ marginRight: "2rem" }}>
                     <img
@@ -129,7 +215,7 @@ export default function SecheduleTable() {
                       fontWeight: "bolder",
                     }}
                   >
-                    1:0
+                    {row?.homeTeamScore}:{row?.awayTeamScore}
                   </Box>
                 </Grid>
               </StyledTableCell>
@@ -149,7 +235,7 @@ export default function SecheduleTable() {
                       fontWeight: "bolder",
                     }}
                   >
-                    Serbia
+                    {row?.awayTeam}
                   </Box>
                 </Grid>
               </StyledTableCell>
