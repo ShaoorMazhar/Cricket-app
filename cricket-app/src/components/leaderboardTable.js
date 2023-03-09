@@ -61,8 +61,30 @@ export default function LeaderBoardTable() {
           <TableRow>
             <StyledTableCell>Team Name</StyledTableCell>
             <StyledTableCell align="right">MP</StyledTableCell>
-            <StyledTableCell align="right">GP</StyledTableCell>
-            <StyledTableCell align="right">GA</StyledTableCell>
+            <StyledTableCell
+              align="right"
+              sx={{
+                display: { xs: "revert", sm: "none" },
+              }}
+            >
+              GD
+            </StyledTableCell>
+            <StyledTableCell
+              align="right"
+              sx={{
+                display: { xs: "none", sm: "revert" },
+              }}
+            >
+              GP
+            </StyledTableCell>
+            <StyledTableCell
+              align="right"
+              sx={{
+                display: { xs: "none", sm: "revert" },
+              }}
+            >
+              GA
+            </StyledTableCell>
             <StyledTableCell align="right">Points</StyledTableCell>
           </TableRow>
         </TableHead>
@@ -93,8 +115,31 @@ export default function LeaderBoardTable() {
                 </Grid>
               </StyledTableCell>
               <StyledTableCell align="right">{row.calories}</StyledTableCell>
-              <StyledTableCell align="right">{row.fat}</StyledTableCell>
-              <StyledTableCell align="right">{row.carbs}</StyledTableCell>
+              <StyledTableCell
+                align="right"
+                sx={{
+                  display: { xs: "revert", sm: "none" },
+                }}
+              >
+                {row.carbs}
+              </StyledTableCell>
+              <StyledTableCell
+                align="right"
+                sx={{
+                  display: { xs: "none", sm: "revert" },
+                }}
+              >
+                {row.fat}
+              </StyledTableCell>
+
+              <StyledTableCell
+                align="right"
+                sx={{
+                  display: { xs: "none", sm: "revert" },
+                }}
+              >
+                {row.carbs}
+              </StyledTableCell>
               <StyledTableCell
                 align="right"
                 sx={{

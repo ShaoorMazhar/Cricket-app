@@ -50,8 +50,8 @@ const rows = [
     homeTeam: "Brazil",
     awayTeam: "Serbia",
     matchPlayed: true,
-    homeTeamScore: 2,
-    awayTeamScore: 1,
+    homeTeamScore: 1,
+    awayTeamScore: 2,
   },
   {
     matchDate: 1651744228685,
@@ -185,7 +185,7 @@ export default function SecheduleTable() {
               >
                 {row?.stadium}
               </StyledTableCell>
-              <StyledTableCell align="right" sx={{ width: "230px" }}>
+              <StyledTableCell align="right" sx={{ width: "250px" }}>
                 <Grid
                   container
                   sx={{ alignItems: "center", justifyContent: "center" }}
@@ -213,6 +213,7 @@ export default function SecheduleTable() {
                     sx={{
                       fontSize: "16px !important",
                       fontWeight: "bolder",
+                      width: "30px",
                     }}
                   >
                     {row?.homeTeamScore}:{row?.awayTeamScore}
